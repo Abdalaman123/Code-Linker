@@ -43,7 +43,6 @@
 <style>
     article .VS a {
         color: #009688;
-        transition: 1s;
     }
 
     article .VS a:hover {
@@ -52,22 +51,37 @@
 
     article .atom a {
         color: #FF3E7F;
-        transition: 1s;
     }
 
     article .atom a:hover {
         color: #66595C;
     }
-    .modal-body{
-        text-align: justify;
-        
+
+    article .codepen a {
+        color: #03A9F4;
     }
-    .article--post__content .article--post__teaser span{
+
+    article .codepen a:hover {
+        color: black;
+        cursor: pointer;
+    }
+
+    .modal-body {
+        text-align: justify;
+
+    }
+
+    .mbtn {
+        background-color: #0D1D33;
+    }
+
+    .article--post__content .article--post__teaser span {
         color: #0187D1;
         font-weight: bold;
         transition: .5s;
     }
-    .article--post__content .article--post__teaser span:hover{
+
+    .article--post__content .article--post__teaser span:hover {
         color: black;
         cursor: pointer;
     }
@@ -160,7 +174,7 @@
                                         </a></span><br><br>
                                 </header>
                                 <h2 class="article--post__title VS"><a href="https://code.visualstudio.com/">Visual
-                                        Studio Code | Code Editor Both are availble Online and Offline</a><br>
+                                        Studio Code | This code editor is available both online and offline.</a><br>
                                 </h2>
                                 <div class="article--post__content">
                                     <p class="article--post__teaser"><time datetime="2024-05-17"
@@ -189,7 +203,7 @@
                                     </div><span class="article--post__author-name"><a class="text-body">Atom Code Editor
                                         </a></span><br><br>
                                 </header>
-                                <h2 class="article--post__title atom"><a href="https://code.visualstudio.com/">Atom Code
+                                <h2 class="article--post__title atom"><a href="https://atom-editor.cc/">Atom Code
                                         Editor | Atom is available only for download</a><br>
                                 </h2>
                                 <div class="article--post__content">
@@ -209,8 +223,7 @@
                                             <a class="bio-image-link">
                                                 <div class="bio-image-wrapper">
                                                     <picture>
-                                                        <img class="bio-image-image"
-                                                            src="data:image/png;base64,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"
+                                                        <img class="bio-image-image" src="/assets/img/codepen-logo.png"
                                                             width="100" height=100 alt="Talke Hoppmann-Walton">
                                                     </picture>
                                                 </div>
@@ -219,19 +232,547 @@
                                     </div><span class="article--post__author-name"><a class="text-body">Code Pen Editor
                                         </a></span><br><br>
                                 </header>
-                                <h2 class="article--post__title atom"><a href="https://code.visualstudio.com/">Code Pen
-                                        Editor | Code Pen is available only for download</a><br>
+                                <h2 class="article--post__title codepen"><a href="https://codepen.io/pen/">Code
+                                        Pen
+                                        Editor | Code Pen is available only for online use</a><br>
                                 </h2>
                                 <div class="article--post__content">
                                     <p class="article--post__teaser"><time datetime="2024-05-17"
-                                            class="article--post__time"><strong> Atom Code Editor </strong>| Atom is
-                                            available as a free downloadable application for your computer, allowing you
-                                            to use it at no cost once downloaded.<br><br> <span data-bs-toggle="modal"
-                                                data-bs-target="#atom">Read More</span>
+                                            class="article--post__time"> <strong> CodePen Code Editor</strong> | CodePen
+                                            is exclusively available online, offering free usage directly through your
+                                            browser. Enjoy using it online at no cost. <br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#codepen">Read More</span>
                                     </p>
                                 </div>
                             </article>
                             <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="/assets/img/JS-Fiddle.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">JSFiddle Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title VS"><a href="https://jsfiddle.net/">JSFiddle
+                                        Code editor | JSFiddle is available only for online use </a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong> JSFiddle Code Editor </strong>|
+                                            JSFiddle is exclusively available online, offering free usage directly
+                                            through your browser. Enjoy using it online at no cost.<br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#jsfiddle">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image"
+                                                            src="https://c.staticblitz.com/assets/pwa-icon-f559737e5eae9b3544e5cc1291118bf758ee20873d496f1ce2052859fb3b72d6.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">StackBlitz Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title atom"><a href="https://stackblitz.com/">StackBlitz Code
+                                        editor | StackBlitz is
+                                        available only for online use</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong> StackBlitz Code Editor </strong> |
+                                            StackBlitz is exclusively available online, offering free usage directly
+                                            through your browser. Enjoy using it online at no cost. <br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#stackblitz">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="/assets/img/sublime-text.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">Sublime Text
+                                            Code Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title codepen"><a href="https://www.sublimetext.com/">Sublime
+                                        Text
+                                        Code Editor | Sublime Text is available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"> <strong> Sublime Text Code Editor </strong> |
+                                            Sublime Text is available as a free downloadable application for your
+                                            computer, allowing you to use it at no cost once downloaded.<br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#sublime">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image"
+                                                            src="https://img.utdstc.com/icon/6cc/386/6cc38687d841eec9b0b17ca2270a10443afa4363cbde2fdfc3729e822c9a3196:100"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">Replit Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title VS"><a href="https://replit.com/">Replit
+                                        Code editor | Replit code editor is available both online and offline. </a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong> Replit Code Editor </strong>| Replit
+                                            Code Editor offers both online and downloadable versions, allowing you to
+                                            use it for free in either mode.<br><br> <span data-bs-toggle="modal"
+                                                data-bs-target="#replit">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image"
+                                                            src="https://es.followband.com/images/4/4151/95e56abd22979db8e4f7a99277a0d1bb.jpg"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">Coffee Cup Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title atom"><a href="https://www.coffeecup.com/">Coffee Cup
+                                        Code editor | Coffee Cup is
+                                        available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong> Coffee Cup Code Editor </strong> |
+                                            Coffee Cup Code Editor is available as a free downloadable application for
+                                            your computer, allowing you to use it at no cost once downloaded.<br><br>
+                                            <span data-bs-toggle="modal" data-bs-target="#coffeecup">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="/assets/img/web-storm.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">Web Storm
+                                            Code Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title codepen"><a href="https://www.jetbrains.com/webstorm/download/#section=windows">Web
+                                        Storm
+                                        Code Editor | Web Storm is available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"> <strong> Web Storm Code Editor </strong> |
+                                            Web Storm is available as a free downloadable application for your
+                                            computer, allowing you to use it at no cost once downloaded.<br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#webstorm">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="/assets/img/intelli-j.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">IntelliJ Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title VS"><a href="https://www.jetbrains.com/idea/">IntelliJ
+                                        Code editor | iNTELLIj is available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong> IntelliJ Code Editor </strong>|
+                                            IntelliJ
+                                            Code Editor is available as a free downloadable application for your
+                                            computer, allowing you to use it at no cost once downloaded.<br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#intellij">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="/assets/img/ultra-edit.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">Ultra Edit Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title atom"><a
+                                        href="https://www.ultraedit.com/products/ultraedit/">Ultra Edit
+                                        Code editor | Ultra Edit is
+                                        available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong>Ultra Edit Code Editor </strong> |
+                                            Ultra Code Editor is available as a free downloadable application for
+                                            your computer, allowing you to use it at no cost once downloaded.<br><br>
+                                            <span data-bs-toggle="modal" data-bs-target="#ultraedit">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="/assets/img/brackets-code.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">Brackets
+                                            Code Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title codepen"><a href="https://brackets.io/?lang=en">Brackets
+                                        Code Editor | Brackets code editor is available both online and offline.</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"> <strong> Brackets Code Editor </strong> |
+                                            Brackets Code Editor offers both online and downloadable versions, allowing you to
+                                            use it for free in either mode.<br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#brackets">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="/assets/img/net-beans.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">Apache NetBeans Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title VS"><a href="https://netbeans.apache.org/front/main/index.html">Apache NetBeans
+                                        Code editor | Apache NetBeans is available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong> Apache NetBeans Code Editor </strong>|
+                                            Apache NetBeans
+                                            Code Editor is available as a free downloadable application for your
+                                            computer, allowing you to use it at no cost once downloaded.<br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#netbeans">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/544px-Vimlogo.svg.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">Vim Development Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title atom"><a
+                                        href="https://www.vim.org/download.php">Vim Development | Vim Development is
+                                        available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong>Vim Development  Code Editor </strong> |
+                                            Ultra Code Editor is available as a free downloadable application for
+                                            your computer, allowing you to use it at no cost once downloaded.<br><br>
+                                            <span data-bs-toggle="modal" data-bs-target="#vim">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="/assets/img/note-pad.svg"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">NotePad++
+                                            Code Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title codepen"><a href="https://notepad-plus-plus.org/downloads/">NotePad++
+                                        Code Editor | NotePad++ is
+                                        available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"> <strong> NotePad++ Code Editor </strong> |
+                                            NotePad++ is available as a free downloadable application for
+                                            your computer, allowing you to use it at no cost once downloaded.<br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#notepad">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="/assets/img/gnu-emacs.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">GNU Emacs Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title VS"><a href="https://www.gnu.org/software/emacs/emacs.html">GNU Emacs
+                                        Code editor | GNU Emacs is available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong> GNU Emacs Code Editor </strong>|
+                                            GNU Emacs
+                                            Code Editor is available as a free downloadable application for your
+                                            computer, allowing you to use it at no cost once downloaded.<br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#emacs">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/PhpStorm_Icon.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">PHP Storm Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title atom"><a
+                                        href="https://www.jetbrains.com/phpstorm/download/#section=windows">PHP Storm | PHP Storm is
+                                        available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong>PHP Storm  Code Editor </strong> |
+                                            PHP Storm Editor is available as a free downloadable application for
+                                            your computer, allowing you to use it at no cost once downloaded.<br><br>
+                                            <span data-bs-toggle="modal" data-bs-target="#phpstorm">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="https://avatars.githubusercontent.com/u/15991786?s=200&v=4"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">CodeShare
+                                            Code Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title codepen"><a href="https://codeshare.io/ezJVPL">CodeShare
+                                        Code Editor | CodeShare is available both online and offline</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"> <strong> CodeShare Code Editor </strong> |
+                                            CodeShare Code Editor is available as a free downloadable application for your computer, allowing you to use it at no cost once downloaded.
+                                            <br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#codeshare">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="/assets/img/gnu-emacs.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">Bare Bones Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title VS"><a href="https://www.barebones.com/products/bbedit/">Bare Bones
+                                        Code editor | Bare Bones is available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong> Bare Bones Code Editor </strong>|
+                                            Bare Bones
+                                            Code Editor is available as a free downloadable application for your
+                                            computer, allowing you to use it at no cost once downloaded.<br><br> <span
+                                                data-bs-toggle="modal" data-bs-target="#barebones">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
+                            <hr><br><br>
+                            <article class="article--post">
+                                <header>
+                                    <div class="article--post__image rounded-lg w-20 h-20">
+                                        <figure role="presentation" class=bio-image>
+                                            <a class="bio-image-link">
+                                                <div class="bio-image-wrapper">
+                                                    <picture>
+                                                        <img class="bio-image-image" src="https://steemitimages.com/640x0/https://res.cloudinary.com/hpiynhbhq/image/upload/v1516022776/q4yjgfrakmbpamftlauc.png"
+                                                            width="100" height=100 alt="Talke Hoppmann-Walton">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </div><span class="article--post__author-name"><a class="text-body">Text Mate Code
+                                            Editor
+                                        </a></span><br><br>
+                                </header>
+                                <h2 class="article--post__title atom"><a
+                                        href="https://macromates.com/">Text Mate | Text Mate is
+                                        available only for Download</a><br>
+                                </h2>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2024-05-17"
+                                            class="article--post__time"><strong>Text Mate  Code Editor </strong> |
+                                            Text Mate Editor is available as a free downloadable application for
+                                            your computer, allowing you to use it at no cost once downloaded.<br><br>
+                                            <span data-bs-toggle="modal" data-bs-target="#textmate">Read More</span>
+                                    </p>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -347,13 +888,16 @@
         <!-- Button trigger modal -->
 
         <!-- Modal -->
-        <div class="modal fade" id="vscode" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="vscode" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h2 class="modal-title fs-8" id="vscode"><strong> Visual Studio Code</strong></h2><br><hr>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #009688; " id="vscode"><strong> Visual Studio
+                                Code</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <div class="modal-body">
                         Visual Studio is an integrated development environment (IDE) developed by Microsoft. It is
                         used to develop
@@ -397,7 +941,7 @@
                         2013, 2015 and 2017 are on Extended Support, while 2019 is on Mainstream Support.[9]
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -405,41 +949,1143 @@
 
 
 
-        
+
         <!-- Modal -->
-        <div class="modal fade" id="atom" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="atom" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
-              <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title fs-8" style="color: #FF3E7F; font-weight: bold;" id="atom"><strong>Atom Code Editor</strong></h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body" style="text-align: justify;">
-          
-                    <strong> Atom</strong> is a free and open-source text and source-code editor for macOS, Linux, and Windows
-                    with support for
-                    plug-ins written in JavaScript, and embedded Git control. Developed by GitHub, Atom was released on June 25,
-                    2015.[8] <br><br>
-          
-                    On June 8, 2022, GitHub announced Atom's end-of-life, occurring on December 15 of the same year, justifying
-                    its need "to prioritize technologies that enable the future of software development", specifically its GitHub
-                    Codespaces and Visual Studio Code, developed by Microsoft which had acquired GitHub in 2018.[9][10]
-                    <br><br>
-          
-                    <h3 style="color: #FF3E7F;"><strong>Features</strong></h3>
-                    Atom is a "hackable" text editor, which means it is customizable using HTML, CSS, and JavaScript.[11] <br><br>
-          
-                    Atom is a desktop application built using web technologies.[12] It is based on the Electron framework, which
-                    was developed for that purpose, and hence was formerly called Atom Shell.[13] Electron is a framework that
-                    enables cross-platform desktop applications using Chromium and Node.js.[14][15] <br><br>
-          
-                    Atom was initially written in CoffeeScript and Less, but much of it was converted to JavaScript.[16] <br><br>
-          
-                    Atom uses Tree-sitter to provide syntax highlighting for multiple programming languages and file formats.[17]
-          
-                  </div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #FF3E7F; " id="atom"><strong>Atom
+                                Code Editor</strong></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <strong> Atom</strong> is a free and open-source text and source-code editor for macOS, Linux,
+                        and Windows
+                        with support for
+                        plug-ins written in JavaScript, and embedded Git control. Developed by GitHub, Atom was released
+                        on June 25,
+                        2015.[8] <br><br>
+
+                        On June 8, 2022, GitHub announced Atom's end-of-life, occurring on December 15 of the same year,
+                        justifying
+                        its need "to prioritize technologies that enable the future of software development",
+                        specifically its GitHub
+                        Codespaces and Visual Studio Code, developed by Microsoft which had acquired GitHub in
+                        2018.[9][10]
+                        <br><br>
+
+                        <h3 style="color: #FF3E7F;"><strong>Features</strong></h3>
+                        Atom is a "hackable" text editor, which means it is customizable using HTML, CSS, and
+                        JavaScript.[11] <br><br>
+
+                        Atom is a desktop application built using web technologies.[12] It is based on the Electron
+                        framework, which
+                        was developed for that purpose, and hence was formerly called Atom Shell.[13] Electron is a
+                        framework that
+                        enables cross-platform desktop applications using Chromium and Node.js.[14][15] <br><br>
+
+                        Atom was initially written in CoffeeScript and Less, but much of it was converted to
+                        JavaScript.[16] <br><br>
+
+                        Atom uses Tree-sitter to provide syntax highlighting for multiple programming languages and file
+                        formats.[17]
+
+                    </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="codepen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #03a9f4;" id="codepen">
+                            <strong>CodePen Editor</strong>
+                        </h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <strong> CodePen</strong> is an online community for testing and showcasing user-created HTML,
+                        CSS and JavaScript
+                        code snippets.
+                        It functions as an online code editor and open-source learning environment, where developers can
+                        create code
+                        snippets, called "pens," and test them. It was founded in 2012 by full-stack developers Alex
+                        Vazquez and Tim
+                        Sabat and front-end designer Chris Coyier.[1][2][non-primary source needed] Its employees work
+                        remotely,
+                        rarely all meeting together in person. CodePen is a large community for web designers and
+                        developers to
+                        showcase their coding skills,[3] with an estimated 330,000[4][unreliable source?] registered
+                        users and 14.16
+                        million monthly visitors.[5] <br><br>
+
+                        <h3 style="color: #03a9f4;"><strong>References</strong></h3>
+                        <strong>1.</strong> That Tech Show Podcast - EPISODE 33 - CODEPEN, CSS TRICKS AND OTHER NERDERY
+                        WITH CHRIS
+                        COYIER". 2021-09-28. <br><br>
+                        <strong>2.</strong> CodePen "About page", Codepen.io, 17 March 2016. <br><br>
+                        <strong>3.</strong> Silva, Patrícia (10 July 2020). "What is CodePen, and how to use it?".
+                        imaginarycloud.com.
+                        Archived from the original on 2020-08-12. Retrieved 5 January 2022. <br><br>
+                        <strong>4.</strong> Kelly Kearsley (14 September 2015). "#50startups Update: How CodePen Raised
+                        $1 Million (in
+                        Five Minutes)". Startupbend. Archived from the original on 11 July 2018. Retrieved 17 March
+                        2017. <br><br>
+                        <strong>5.</strong> codepen.io Traffic Statistics". SimilarWeb. Retrieved 2019-11-16.
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Visual Studio Modal Box -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="jsfiddle" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #009688; " id="jsfiddle"><strong> JSFiddle Code
+                                Editor</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong>JSFiddle</strong> is an online IDE service and online community for testing and
+                        showcasing
+                        user-created and collaborational HTML, CSS and JavaScript code snippets, known as 'fiddles'. It
+                        allows for
+                        simulated AJAX calls. In 2019, JSFiddle was ranked the second most popular online IDE by the
+                        PopularitY of
+                        Programming Language (PYPL) index based on the number of times it was searched, directly behind
+                        Cloud9 IDE,
+                        worldwide[1] and in the USA.[2] <br><br>
+
+                        <h3 style="color: #009688;"><strong>Concept</strong></h3>
+                        JSFiddle is an online IDE which is designed to allow users to edit and run HTML, JavaScript, and
+                        CSS code on a
+                        single page.[3] Its interface is minimalist and split into four main frames, which correspond to
+                        editable
+                        HTML, JavaScript and CSS fields and a result field which displays the user's project after it is
+                        run. [3]
+                        Since early on, JSFiddle adopted smart source-code editor with programming features. <br><br>
+
+                        As of 2020, JSFiddle uses CodeMirror to support its editable fields, providing multicursors,
+                        syntax
+                        highlighting, syntax verification (linter), brace matching, auto indentation, autocompletion,
+                        code/text
+                        folding, Search and Replace to assist web developers in their actions.[4] On the left, a sidebar
+                        allows users
+                        to integrate external resources such as external CSS stylesheets and external JavaScript
+                        libraries. The most
+                        popular JavaScript frameworks and CSS frameworks are suggested to users and available via a
+                        click. <br><br>
+
+                        JSFiddle allows users to publicly save their code an uncapped number of times for free.[3] Each
+                        version is
+                        saved online at the application's website with an incremental numbered suffix.[citation needed]
+                        This allows
+                        users to re-access their saved code.[3] Code saved on JSFiddle may also be edited into new
+                        versions, shared
+                        with other parties, and forked into a new line.[3] <br><br>
+
+                        JSFiddle is widely used among web developers to share simple tests and demonstrations. JSFiddle
+                        is also widely
+                        used on Stack Overflow, the dominant question-answer online forum for the web industry.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="stackblitz" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #FF3E7F; " id="stackblitz"><strong>StackBlitz
+                                Code Editor</strong></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong>StackBlitz</strong> is a collaborative online integrated development environment
+                        (IDE).[2] The
+                        platform allows server-side software such as Node.js to be run entirely in the web browser,
+                        enabling fully
+                        online full-stack development.[3] A number of web frameworks such as React, Next.js and Angular
+                        are
+                        supported.[4] <br><br>
+                        <h3 style="color: #FF3E7F;"><strong>History</strong></h3>
+                        StackBlitz was released to the public on August 2, 2017 by entrepreneur Eric Simons as an online
+                        integrated
+                        development environment for creating and sharing Angular and React projects.[1] Prior to
+                        launching StackBlitz,
+                        Simons had attracted media attention by secretly living at AOL headquarters for two months in
+                        2011 while
+                        working on a different startup company.[5][6][7] <br><br>
+
+                        In May 2021, StackBlitz released WebContainers, a containerization solution that allowed
+                        server-side runtime
+                        environments such as Node.js to operate fully with web browsers. The company stated that the
+                        technology could
+                        boot development environments in less than a second, and was more secure than local environments
+                        due to
+                        running fully within the browser sandbox.[8] <br><br>
+
+                        <h3 style="color: #FF3E7F;"><strong>Features</strong></h3><br>
+                        StackBlitz offers an online integrated development environment that operates fully within a
+                        user's web browser
+                        as opposed to a more traditional local development environment. The software primarily
+                        emphasizes JavaScript
+                        development and has a large number of web framework templates readily available. Other Node.js,
+                        Python and PHP
+                        projects are also supported.[9]
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="sublime" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #03a9f4;" id="sublime">
+                            <strong>Sublime Text Code Editor</strong>
+                        </h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong>Sublime Text</strong> is a shareware text and source code editor available for Windows,
+                        macOS, and
+                        Linux. It natively supports many programming languages and markup languages. Users can customize
+                        it with
+                        themes and expand its functionality with plugins, typically community-built and maintained under
+                        free-software
+                        licenses. To facilitate plugins, Sublime Text features a Python API. The editor utilizes minimal
+                        interface and
+                        contains features for programmers including configurable syntax highlighting, code folding,
+                        search-and-replace
+                        supporting regular-expressions, terminal output window, and more. It is proprietary software,
+                        but a free
+                        evaluation version is available. <br><br>
+                        <br>
+                        <h3 style="color: #03a9f4;"><strong>Features</strong></h3><br>
+                        The following is a list of features of Sublime Text:[4]
+                        <li>"Goto Anything", quick navigation to project files, symbols, or lines[5]</li>
+                        <li>"Command palette" uses adaptive matching for quick keyboard invocation of arbitrary commands
+                        </li>
+                        <li>Simultaneous editing: simultaneously make the same interactive changes to multiple selected
+                            areas</li>
+                        <li>Python-based plugin API</li>
+                        <li>Project-specific preferences</li>
+                        <li>Extensive customizability via JSON settings files, including project-specific and
+                            platform-specific
+                            settings</li>
+                        <li>Cross-platform (Windows, macOS, and Linux) and Supportive Plugins for cross-platform</li>
+                        <li>Compatible with many language grammars from TextMate</li>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Visual Studio Modal Box -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="replit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #009688; " id="replit"><strong> Replit Code
+                                Editor</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong> Replit</strong>, formerly Repl.it, is an American start-up and an online integrated
+                        development
+                        environment (IDE).[3] Replit allows users to create online programming projects called repls.[4]
+                        <br><br>
+                        <br>
+                        <h3 style="color: #009688;"><strong>History</strong></h3><br>
+                        Replit was co-founded by programmers Amjad Masad, Faris Masad, and designer Haya Odeh in
+                        2016.[1][2] It was
+                        incorporated in San Mateo.[5] Once listed as a co-founder alongside Masad, Max Shawabkeh left
+                        the venture
+                        early on.[6][7][8] Its name comes from the acronym REPL, which stands for "read–evaluate–print
+                        loop". <br><br>
+
+                        Before creating Replit, Amjad Masad worked in engineering roles at Yahoo and Facebook, where he
+                        built
+                        development tools. He also helped found Codecademy. Masad had come up with the idea for Replit
+                        over a decade
+                        before its creation.[9] <br><br>
+
+                        In 2009, Amjad Masad sought to write implementations of other programming languages in
+                        JavaScript, but
+                        realized it was not practically feasible. He saw great leaps in browser and web technologies and
+                        was inspired
+                        by the web capabilities of Google Docs. He thought of the idea of being able to write and share
+                        code all in a
+                        web browser. He spent two years creating an open-source product with Haya Odeh called
+                        "JSRepl".[10] This
+                        product allowed him to compile languages into JavaScript. It powered Udacity and Codecademy's
+                        tutorials. After
+                        becoming an early employee of Codecademy, this project was put off until years later, when he
+                        and Odeh decided
+                        to revive the project of a programming environment in a browser.[3][9] <br><br>
+
+                        As Replit was taking shape, Masad and Odeh wanted to have "a real environment and not something
+                        emulated in
+                        the browser." The focus was first directed at the education market, and then later towards
+                        professional
+                        developers.[3] <br><br>
+
+                        Since March 2021, "replit.com" has been the default domain name for the web service replacing
+                        the older
+                        "repl.it". This change was attributed to Masad's preference that people pronounce the website's
+                        name as
+                        /ˈrɛplɪt/ instead of /ˈrɛpəl/.[10] Another reason cited by Masad was issues with the ".it"
+                        top-level domain,
+                        such as renewal restrictions.[11] <br><br>
+
+                        Replit originally was only a REPL. However, the Ace editor was eventually implemented, allowing
+                        for editing of
+                        programs as well. In 2017, Replit switched to the Monaco code editor, the same editor used in
+                        Visual Studio
+                        Code. Due to issues with mobile support, the code editor was switched to CodeMirror over 2021 -
+                        2022.[12] This
+                        decision was met with backlash and criticism from the Replit community, which eventually calmed
+                        down after
+                        bugs and major issues were addressed. <br><br>
+
+                        Replit offered Teams for Education,[13] a product to assist in teaching programming in the
+                        classroom. It was
+                        announced that from November 15th 2023, bug fixes and features would no longer be added to teams
+                        for
+                        education.[14] <br><br>
+
+                        In 2024 it was announced that Replit would be moving from its SoMa headquarters in San Francisco
+                        to a new
+                        location in Foster City.[15][16]
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="coffeecup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #FF3E7F; " id="coffeecup"><strong>Coffee Cup
+                                Code Editor</strong></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        CoffeeCup HTML Editor is an HTML editor. Originally created by Nicholas Longo and Kevin Jurica,
+                        it was first
+                        released to the public in August 1996. Until version 12.5 released in 2012, it was capable of
+                        WYSIWYG editing.
+                        <br><br>
+
+                        In later versions, editing is done using HTML code, supported and assisted by a number of
+                        built-in features to
+                        generate and check code. While coding, a web browser preview would continuously update in a
+                        separate window or
+                        a split part of the main editor window (split-screen editing). However, the running internal
+                        preview stopped
+                        working sometime in 2023, because it relied on the long-deprecated browser Internet Explorer,
+                        which Microsoft
+                        disabled in a Windows update that year. In a support answer in November 2023, the Sales &
+                        Support Manager
+                        wrote: "At this time we do [not] have an alternative for the internal preview. We are working to
+                        rebuild the
+                        whole app for Chrome but we don't have an eta [estimated time of arrival] yet for that. In the
+                        mean time you
+                        would need to use the external preview in the browser of your choice." <br><br>
+
+                        The external preview, in a separate window, can use any and all web browsers installed on the
+                        user's computer,
+                        but must be refreshed manually. It does not update continuously while coding. <br><br>
+
+                        According to the authors the editor was the first to support JavaScript (version 3.5 Sep. 1996),
+                        split-screen
+                        editing (version 4.0, March 1997) and built-in FTP upload (version 5.2, February 1998). <br><br>
+
+                        It was voted Best Windows HTML Editor in the About.com Readers' Choice Awards two years in a row
+                        in 2011 and
+                        2012.[1]
+
+                        <br><br>
+                        <br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="webstorm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #03A9F4; " id="webstorm"><strong>Web Storm
+                                Code Editor</strong></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong>WebStorm</strong> is part of a family of IDEs from JetBrains – a company founded, built,
+                        and run by
+                        developers. We’re passionate about coding and want to help developers like ourselves work faster
+                        and spend
+                        less time on routine tasks. Whether you’re starting out or switching tech stacks, we’re here to
+                        support you
+                        every step of the way.
+                        <br><br>
+
+                        Get straight to coding without having to install and configure lots of plugins. WebStorm
+                        includes everything
+                        you need for JavaScript and TypeScript development right from the start. You can personalize it
+                        further with
+                        various plugins and settings. <br><br>
+
+                        With WebStorm, you don't need to be an expert at everything. You can rely on it for the most
+                        challenging
+                        tasks. Whether you’re resolving Git merge conflicts or renaming a symbol across multiple files,
+                        it takes just
+                        a few clicks. As your projects grow in size and complexity, WebStorm will help you explore your
+                        entire
+                        codebase faster and refactor it safely.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- Visual Studio Modal Box -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="intellij" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #009688; " id="intellij"><strong> IntelliJ Code
+                                Editor</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong>IntelliJ</strong> IDEA is an integrated development environment (IDE) written in Java
+                        for developing
+                        computer software written in Java, Kotlin, Groovy, and other JVM-based languages. It is
+                        developed by JetBrains
+                        (formerly known as IntelliJ) and is available as an Apache 2 Licensed community edition,[3] and
+                        in a
+                        proprietary commercial edition. Both can be used for commercial development.[4][5]
+                        <br><br>
+                        <h3 style="color: #009688;"><strong>History</strong></h3><br>
+                        The first version of IntelliJ IDEA was released in January 2001 and was one of the first
+                        available Java IDEs
+                        with advanced code navigation and code refactoring capabilities integrated.[6][7] <br><br>
+
+                        In 2009, JetBrains released the source code for IntelliJ IDEA under the open-source Apache
+                        License 2.0.[8][9]
+                        JetBrains also began distributing a limited version of IntelliJ IDEA consisting of open-source
+                        features under
+                        the moniker Community Edition. The commercial Ultimate Edition provides additional features and
+                        remains
+                        available for a fee. <br><br>
+
+                        In a 2010 InfoWorld report, IntelliJ received the highest test center score out of the four top
+                        Java
+                        programming tools: Eclipse, IntelliJ IDEA, NetBeans and JDeveloper.[10] <br><br>
+
+                        In December 2014, Google announced version 1.0 of Android Studio, an open-source IDE for Android
+                        apps, based
+                        on the open source community edition.[11] Other development environments based on IntelliJ's
+                        framework include
+                        AppCode, CLion, DataGrip, GoLand, PhpStorm, PyCharm, Rider, RubyMine, WebStorm, and MPS.[12]
+                        <br><br>
+
+                        In September 2020, Huawei announced and released version 1.0 of DevEco Studio, an open-source
+                        IDE for
+                        HarmonyOS apps development, based on Jetbrains IntelliJ IDEA with Huawei's SmartAssist for
+                        Windows and
+                        macOS.[13]
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="ultraedit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #FF3E7F; " id="ultraedit"><strong>Ultra Edit
+                                Code Editor</strong></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        <strong> UltraEdit</strong> is a text editor for Microsoft Windows, Linux,[1] and MacOS. It was
+                        initially
+                        developed in 1994 by Ian D. Mead, the founder of IDM Computer Solutions Inc.,[2] and was
+                        acquired by Idera
+                        Inc. in the August of 2021. Originally called MEDIT, it was first designed to run on Windows
+                        3.1. A version
+                        called UltraEdit-32 was later created to run on Windows NT and Windows 95. The last 16-bit
+                        UltraEdit program
+                        version was 6.20b. UltraEdit-32 was later renamed to UltraEdit in version 14.00. Version 22.2
+                        was the first
+                        native 64-bit version of the text editor. Starting with 2022.0 (successor of 28.20), versioning
+                        had become
+                        year-based.[3]
+                        <br><br>
+                        <h3 style="color: #FF3E7F;"><strong>Key Features</strong></h3><br>
+                        <li>Facilitates the opening and editing of large files, up to 4GB and greater in size</li>
+                        <li>Native 64-bit architecture</li>
+                        <li>Multi-caret editing and multi-select</li>
+                        <li>Document map navigation</li>
+                        <li>Column (block) mode editing</li>
+                        <li>Regular expression find and replace</li>
+                        <li>Find/Replace in Files</li>
+                        <li>Extensible code highlighting, with 'wordfiles' already available for many languages</li>
+                        <li>Code folding and hierarchical function listing</li>
+                        <li>Beautify and reformat source code</li>
+                        <li>XML editing features, such as XML tree view, reformatting, and validation</li>
+                        <li>Auto-closing XML and HTML tags</li>
+                        <li>Smart templates for code completion</li>
+                        <li>Editor themes</li>
+                        <li>Integrated FTP, SSH, and Telnet clients</li>
+                        <li>Hex editing</li>
+                        <li>Log file polling</li>
+                        <li>File/data sorting</li>
+                        <li>File encryption and decryption</li>
+                        <li>Project management</li>
+                        <li>Bookmarking</li>
+                        <li>Automation via macros and scripts</li>
+                        <li>Integrated file compare</li>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- Visual Studio Modal Box -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="brackets" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #009688; " id="brackets"><strong> Brackets Code
+                                Editor</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        <strong>Brackets</strong> is a source code editor with a primary focus on web development.[5] Created by Adobe
+                        Inc., it is free and open-source software licensed under the MIT License, and is currently maintained on
+                        GitHub by open-source developers. It is written in JavaScript, HTML and CSS. Brackets is cross-platform,
+                        available for macOS, Windows, and most Linux distributions. The main purpose of Brackets is its live HTML, CSS
+                        and JavaScript editing functionality.[6] <br><br>
+              
+                        On November 4, 2014, Adobe announced the first (1.0) release of Brackets. The update introduced new features
+                        such as custom shortcut key combinations and more accurate JavaScript hinting. Brackets has a major focus on
+                        development in JavaScript-enabled, CSS and HTML. With release of version 1.0, Adobe announced a feature that
+                        extracts design information from a PSD file for convenience of coding in CSS.[7] As of June 28, 2016, the
+                        feature is officially discontinued, due to low usage.[8] However, Extract is still available via Photoshop and
+                        Dreamweaver, both of which are part of their paid service, Adobe Creative Cloud.[9] In March 2021, Adobe
+                        announced it would end their support for Brackets on September 1, 2021. <br><br>
+              
+                        The Brackets project was subsequently transferred to become a community-owned and driven project. The latest
+                        version release of Brackets is 2.2.1.[10]<br><br>
+                        <h3 style="color: #009688;"><strong>History</strong></h3><br>
+                        Adobe first started development of a text editor for web development on Edge Code, which was discontinued as
+                        of November 2014.[11] This effort was later transformed into Adobe Brackets. With the release of Brackets 1.0,
+                        Adobe announced that the development of an open source application for web development was ready and was not
+                        an experimental project any more. Brackets contains contributions by more than 282 community contributors and
+                        has more than 400 requests for bug fixes and new features. Every version of Brackets had more than 100,000
+                        downloads, and it was the 16th most popular project on GitHub as of January 16, 2015.[12] <br><br>
+              
+                        The Brackets repository on GitHub (Bracket repository) currently has 152 branches, 110 releases and 17,700
+                        commits as of 30 Aug 2018. The source code is freely available under the MIT license. A developer can alter
+                        features on Brackets and personalize it for one's own convenience by forking the software code.[13] <br><br>
+              
+                        Adobe officially dropped support for Brackets on September 1, 2021 and recommended users migrate to
+                        Microsoft's Visual Studio Code.[14] The final official release was version 1.14.2, but a community fork
+                        continues to release newer versions.[15][16] In addition to the community continuation fork, Brackets
+                        community contributors announced Phoenix on August 30, 2021.[17] Phoenix is a fork of Brackets targeting web
+                        browsers, as opposed to being a native application.[18]
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Visual Studio Modal Box -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="netbeans" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #009688; " id="netbeans"><strong> Apache NetBeans Code
+                                Editor</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong>Apache NetBeans</strong> is an integrated development environment (IDE) for Java. NetBeans allows
+                        applications to be developed
+                        from a set of modular software components called modules. NetBeans runs on Windows, macOS, Linux and Solaris.
+                        In addition to Java development, it has extensions for other languages like PHP, C, C++, HTML5,[3] and
+                        JavaScript. Applications based on NetBeans, including the NetBeans IDE, can be extended by third party
+                        developers.[4]<br><br>
+                        <h3 style="color: #009688;"><strong>History</strong></h3><br>
+                        NetBeans began in 1996 as Xelfi (word play on Delphi),[5][6] a Java IDE student project under the guidance of
+                        the Faculty of Engineering and Technology at Charles University in Prague. In 1997, Roman Staněk formed a
+                        company around the project and produced commercial versions of the NetBeans IDE until it was bought by Sun
+                        Microsystems in 1999. Sun open-sourced the NetBeans IDE in June of the following year. Since then, the
+                        NetBeans community has continued to grow.[7] In 2010, Sun (and thus NetBeans) was acquired by Oracle
+                        Corporation. Under Oracle, NetBeans had to find some synergy with JDeveloper, a freeware IDE that has
+                        historically been a product of the company, by 2012 both IDEs were rebuilt around a shared codebase - the
+                        NetBeans Platform. In September 2016, Oracle submitted a proposal to donate the NetBeans project to The Apache
+                        Software Foundation, stating that it was "opening up the NetBeans governance model to give NetBeans
+                        constituents a greater voice in the project's direction and future success through the upcoming release of
+                        Java 9 and NetBeans 9 and beyond". The move was endorsed by Java creator James Gosling.[8] The project entered
+                        the Apache Incubator in October 2016.[9]
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="vim" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #FF3E7F; " id="vim"><strong>Vim Development
+                                Code Editor</strong></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Vim is a free and open-source, screen-based text editor program. It is an improved clone of Bill Joy's vi.
+                        Vim's author, Bram Moolenaar, derived Vim from a port of the Stevie editor for Amiga[6] and released a version
+                        to the public in 1991. Vim is designed for use both from a command-line interface and as a standalone
+                        application in a graphical user interface.[7] Since its release for the Amiga, cross-platform development has
+                        made it available on many other systems. In 2018, it was voted the most popular editor amongst Linux Journal
+                        readers;[8] in 2015 the Stack Overflow developer survey found it to be the third most popular text editor,[9]
+                        and in 2019 the fifth most popular development environment.[10]<br><br>
+                        <h3 style="color: #FF3E7F;"><strong>History</strong></h3><br>
+                        Vim's forerunner, Stevie (ST Editor for VI Enthusiasts), was created by Tim Thompson for the Atari ST in
+                        1987[11][12] and further developed by Tony Andrews[11][13] and G.R. (Fred) Walter.[14][15] It was one of the
+                        first popularized clones of Vi, and did not use Vi's source code. The source code for Vi used the Ed text
+                        editor developed under AT&T, and therefore Vi could only be used by those with an AT&T source
+                        license.[citation needed] Basing Vim on the source code for Stevie meant the program could be distributed
+                        without requiring the AT&T source license. <br><br>
+              
+                        Basing his work on Stevie, Bram Moolenaar began working on Vim for the Amiga computer in 1988, with the first
+                        public release (Vim v1.14) in 1991.[16][17][better source needed] <br><br>
+              
+                        At the time of its first release, the name "Vim" was an acronym for "Vi IMitation", but this changed to "'Vi
+                        IMproved" late in 1993.[18]
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Visual Studio Modal Box -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="notepad" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #03A9F4; " id="notepad"><strong> NotePad++ Code
+                                Editor</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        Notepad++ is a free and open-source text and source code editor for use with Microsoft Windows. It supports
+                        tabbed editing, which allows working with multiple open files in a single window. The product's name comes
+                        from the C postfix increment operator; it is sometimes referred to as npp or NPP.[5] <br><br>
+              
+                        Notepad++ is distributed as free software. At first, the project was hosted on SourceForge, from where it was
+                        downloaded over 28 million times[6][7] and twice won the SourceForge Community Choice Award for Best Developer
+                        Tool.[8] The project was hosted on TuxFamily [fr] from 2010 to 2015; since 2015, Notepad++ has been hosted on
+                        GitHub.[9] Notepad++ uses the Scintilla editor component.<br><br>
+                        <h3 style="color: #03a9f4;"><strong>History</strong></h3><br>
+                        Notepad++ was developed by Don Ho in September 2003.[10] Ho first used JEXT (a Java-based text editor) at his
+                        company but, dissatisfied with its poor performance, he began to develop a text editor written in C++ with
+                        Scintilla.[10] He developed it in his spare time since the idea was rejected by his company.[10] Notepad++ was
+                        built as a Microsoft Windows application; the author considered, but rejected, the idea of using wxWidgets to
+                        port it to the Mac OS X and Unix platforms.[10] <br><br>
+              
+                        Notepad++ was first released on SourceForge on 25 November 2003, as a Windows-only application. It is based on
+                        the Scintilla editor component, and is written in C++ with only Win32 API calls using only the STL to increase
+                        performance and reduce program size.[11][12] <br><br>
+              
+                        In January 2010 the US government obliged US-based open source project hosts to deny access from Cuba, Iran,
+                        North Korea, Sudan, and Syria to comply with U.S. law.[13] As a response to what the developer felt was a
+                        violation of the free and open-source software (FOSS) philosophy, in June 2010 Notepad++ moved out of US
+                        territorial jurisdiction by releasing a version on TuxFamily, in France. Some community services of Notepad++
+                        (such as the forums and bug tracker) remained on SourceForge until 2015 when Notepad++ left SourceForge
+                        completely.[14][15][16] <br><br>
+              
+                        In 2011 Lifehacker described Notepad++ as "The Best Programming Text Editor for Windows", stating that "if you
+                        prefer a simple, lightweight, and extensible programming plain-text editor, our first choice is the free,
+                        open-source Notepad++".[17] Lifehacker criticized its user interface, stating that "It is, in fact, fairly
+                        ugly. Luckily you can do a lot to customize its looks, and what it lacks in polish, it makes up for in
+                        functionality".[17] <br><br>
+              
+                        In 2014 Lifehacker readers voted Notepad++ as the "Most Popular Text Editor", with 40% of the 16,294
+                        respondents specifying it as their most-loved editor.[18] The Lifehacker team summarized the program as being
+                        "fast, flexible, feature-packed, and completely free".[18] <br><br>
+              
+                        In 2015 Stack Overflow conducted a worldwide Developer Survey, and Notepad++ was voted as the most used text
+                        editor worldwide with 34.7% of the 26,086 respondents claiming to use it daily.[19] Stack Overflow noted that
+                        "The more things change, the more likely it is those things are written in JavaScript with NotePad++ on a
+                        Windows machine".[19] The 2016 survey had Notepad++ at 35.6%.[20] <br><br>
+              
+                        In 2015, in response to the staff hijacking of projects hosted on SourceForge, Notepad++ left SourceForge
+                        completely with the forums being moved to NodeBB and the bug tracker to GitHub.[16][21]
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Visual Studio Modal Box -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="emacs" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #009688; " id="emacs"><strong> GNU Emacs Code
+                                Editor</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        <strong>GNU Emacs</strong> is a free software text editor. It was created by GNU Project founder Richard
+                        Stallman, based on the
+                        Emacs editor developed for Unix operating systems. GNU Emacs has been a central component of the GNU project
+                        and a flagship project of the free software movement.[4][5] Its tag line is "the extensible self-documenting
+                        text editor."[6]<br><br>
+                        <h3 style="color: #009688;"><strong>History</strong></h3><br>
+                        The original EMACS was written in 1976 by David A. Moon and Guy L. Steele Jr. as a set of macros for the TECO
+                        editor, and in 1984, Richard Stallman began work on GNU Emacs, to produce a free software alternative to the
+                        proprietary Gosling Emacs. GNU Emacs was initially based on Gosling Emacs, but Stallman's replacement of its
+                        Mocklisp interpreter with a true Lisp interpreter required that nearly all of its code be rewritten. This
+                        became the first program released by the then-nascent GNU Project. GNU Emacs is written in C and provides
+                        Emacs Lisp, also implemented in C, as an extension language. Version 13, the first public release, was made on
+                        March 20, 1985. The first widely distributed version of GNU Emacs was version 15.34, released later in 1985.
+                        Early versions of GNU Emacs were numbered as "1.x.x," with the initial digit denoting the version of the C
+                        core. The "1" was dropped after version 1.12 as it was thought that the major number would never change, and
+                        thus the major version skipped from "1" to "13". A new third version number was added to represent changes
+                        made by user sites.[7] In the current numbering scheme, a number with two components signifies a release
+                        version, with development versions having three components.[8] <br><br>
+              
+                        GNU Emacs was later ported to the Unix operating system. It offered more features than Gosling Emacs, in
+                        particular a full-featured Lisp as its extension language, and soon replaced Gosling Emacs as the de facto
+                        Unix Emacs editor. Markus Hess exploited a security flaw in GNU Emacs's email subsystem in his 1986 cracking
+                        spree, in which he gained superuser access to Unix computers.[9] <br><br>
+              
+                        Although users commonly submitted patches and Elisp code to the net.emacs newsgroup, participation in GNU
+                        Emacs development was relatively restricted until 1999, and was used as an example of the "Cathedral"
+                        development style in The Cathedral and the Bazaar. The project has since adopted a public development mailing
+                        list and anonymous CVS access. Development took place in a single CVS trunk until 2008, and today uses the
+                        Git[10] DVCS. <br><br>
+              
+                        Richard Stallman has remained the principal maintainer of GNU Emacs, but he has stepped back from the role at
+                        times. Stefan Monnier and Chong Yidong have overseen maintenance since 2008.[11] On September 21, 2015 Monnier
+                        announced that he would be stepping down as maintainer effective with the feature freeze of Emacs 25.[12]
+                        Longtime contributor John Wiegley was announced as the new maintainer on November 5, 2015.[13] Wiegley was
+                        joined by Eli Zaretskii in July, 2016,[14][16] and Lars Ingebrigtsen in September, 2020.[17]
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Visual Studio Modal Box -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="phpstorm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #FF3E7F; " id="phpstorm"><strong> PHP Storm Code
+                                Editor</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        <strong>PhpStorm</strong> is an Integrated Development Environment for the PHP developers, built on top of
+                        IntelliJ IDEA platform. PhpStorm inherits all the web-related functionality of
+                        IntelliJ IDEA for editing PHP, HTML, CSS, JavaScript, XML, working with VCS, SQL, plus adds advanced support
+                        for the other tools specific to web development.
+                        <br><br>
+                        <h3 style="color: #FF3E7F;"><strong>Features</strong></h3><br>
+                        PhpStorm brings you the following advanced features:<br><br>
+                        <li>Intelligent Editor: for PHP, HTML, CSS, JavaScript, and XML, which includes syntax highlighting,
+                          documentation lookup, and refactorings.</li>
+                        <li>Error-Free Coding: on-the-fly code analysis, error highlighting and quick fixes.</li>
+                        <li>Project and Code Navigation: specialized project views, file structure views and quick jumping between
+                          files, classes, methods and usages.</li>
+                        <li>VCS Integrations: out-of-the-box support for Subversion, Perforce, Git, and CVS with changelists and
+                          merge.</li>
+                        <li>FTP Sync: update server using FTP or SFTP.</li>
+                        <li>SQL support: coding assistance, SQL console and Database browser.</li>
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Visual Studio Modal Box -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="codeshare" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #03A9F4; " id="codeshare"><strong> CodeShare Code
+                                Editor</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        <strong>CodeShare</strong> The Realtime Code Editor web applications are a useful tool for enabling real-time
+                        collaboration among developers,
+                        especially when collaborating with remote teams or collaborating with clients, mentors, or tutors. They cut
+                        the
+                        need to share code through time-consuming and error-prone methods like email or file-sharing platforms. The
+                        specific Realtime Code Editor web application described in this research paper is developed using React.js for
+                        the
+                        front-end and Node.js for the back end, with Socket.io helping real-time communication.<br><br>
+                        <h3 style="color: #03a9f4;"><strong>Problem Statement -</strong></h3><br>
+                        <li>CodeShare Realtime Code Editor web applications face challenges in ensuring the security and privacy of
+                          the code being
+                          developed and shared among collaborators.</li>
+                        <li> There is a need to ensure that Realtime Code Editor web applications are scalable and can manage a large
+                          number of users simultaneously.</li>
+                        <li>The user-friendliness and intuitiveness of Realtime Code Editor web applications need to be improved to
+                          supply a seamless and efficient collaboration experience for developers.</li>
+                        <li>Realtime Code Editor web applications need to be compatible with a wide range of devices and operating
+                          systems, allowing developers to work with their preferred tools and platforms.</li>
+                        <li>Efficient version control mechanisms need to be implemented in Realtime Code Editor web applications,
+                          allowing developers to track changes made to the codebase and collaborate effectively without overriding
+                          each
+                          other's work.</li>
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Visual Studio Modal Box -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="barebones" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #009688; " id="barebones"><strong> Bare Bones Code
+                                Editor</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong>BareBones Edit</strong> is a proprietary text editor made by Bare Bones Software, originally developed
+                        for Macintosh System Software 6, and currently supporting macOS.<br><br>
+                        <h3 style="color: #009688;"><strong>History -</strong></h3><br>
+                        The first version of BBEdit was created as a "bare bones" text editor to serve as a "proof of concept"; the
+                        intention was to demonstrate the programming capabilities of an experimental version of Pascal for the
+                        Macintosh. The original prototypes of BBEdit used the TextEdit control available in versions of the classic
+                        Mac OS of the time. The TextEdit control could not load files larger than 32 KB. The Macintosh Pascal project
+                        was ultimately terminated, but the demonstration program was reworked to use the THINK Technologies "PE" text
+                        editing engine used for THINK C, which was much faster and could read larger files. BBEdit was the first
+                        freestanding text editor to use the "PE" editing engine, and is the only one still being developed. <br><br>
+              
+                        BBEdit was available at no charge upon its initial release in 1992 but was commercialized in May 1993 with the
+                        release of version 2.5.[3] At the same time, Bare Bones Software also made a less-featured version of BBEdit
+                        2.5 called BBEdit Lite available at no cost. BBEdit Lite lacked plugin support, scriptability, syntax coloring
+                        and other features then deemed as mainly for advanced users. Bare Bones Software discontinued BBEdit Lite at
+                        version 6.1 and replaced it with TextWrangler, which was available for a fee, although significantly less than
+                        BBEdit. In 2005, TextWrangler 2.0 was released as freeware and subsequent versions continued to be distributed
+                        as such[4] up until 2017, when it was sunsetted and incorporated into BBEdit.[5] <br><br>
+              
+                        Throughout its history, BBEdit has supported many Apple technologies that failed to gain traction, including
+                        OpenDoc and PowerTalk. The failure of PowerTalk, and the desire of developers to have email integrated to
+                        their text editor, led to the development of Mailsmith, an email client that uses BBEdit's editor component.
+                        Formerly developed by Bare Bones as a commercial application, in 2009 Mailsmith was transferred to Stickshift
+                        Software LLC and would continue to be developed as a labor of love and released as freeware.[6] Development of
+                        Mailsmith ceased in 2018.[7] <br><br>
+              
+                        In 1994, taking advantage of BBEdit's then-novel plugin support, third party developers started writing
+                        plug-ins to easily create and format HTML code. In fact, the developers at Bare Bones Software first learned
+                        of the existence of HTML through users inquiring about these plug-ins. Barebones later bought the rights to
+                        the plugin code from their author and included them as part of the standard BBEdit package. The tools were
+                        included as an optional palette in version 4, and were progressively more integrated, gaining their own menu
+                        in version 5.0.[8] In version 4.5, Bare Bones introduced BBEdit Table Builder as an additional tool for web
+                        designers and developers to visually design HTML tables, then the main technique for layout control on web
+                        pages.[9][10] Table Builder was removed in version 6.0, since enhancing it would involve replicating the
+                        features of existing visual HTML editors, and BBEdit was at this time bundled with Dreamweaver.[11] BBEdit's
+                        plugin support was removed in version 9.6, in favor of the expanded selection of scripting languages available
+                        on Mac OS X. <br><br>
+              
+                        BBEdit was one of the first applications to be made available for Mac OS X, as a Carbon app. On macOS, BBEdit
+                        takes advantage of the operating system's Unix underpinnings by integrating scripts written in Python, Perl,
+                        or other common Unix scripting languages, as well as adding features such as shell worksheets that provide a
+                        screen editor interface to command line functionality similar to MPW Worksheets and Emacs shell buffers. <br><br>
+              
+                        BBEdit's creator code R*ch refers to Rich Siegel, one of Bare Bones Software's founders and the original
+                        author of BBEdit.
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Visual Studio Modal Box -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="textmate" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-7" style="color: #FF3E7F; " id="textmate"><strong> Text Mate Code
+                                Editor</strong></h2><br>
+                        <hr>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        <strong>TextMate</strong> is a free and open-source general-purpose GUI text editor for macOS created by Allan Odgaard. TextMate features declarative customizations, tabs for open documents, recordable macros, folding sections, snippets, shell integration, and an extensible bundle system. <br><br>
+                        <h3 style="color: #FF3E7F;"><strong>History -</strong></h3><br>
+                        TextMate 1.0 was released on 5 October 2004, after 5 months of development, followed by version 1.0.1 on 21 October 2004.[2][3][4] The release focused on implementing a small feature set well, and did not have a preference window or a toolbar, didn't integrate FTP, and had no options for printing.[5][6] At first only a small number of programming languages were supported, as only a few “language bundles” had been created. Even so, some developers found this early and incomplete version of TextMate a welcome change to a market that was considered stagnated by the decade-long dominance of BBEdit.[7] <br><br>
+              
+                        TextMate 1.0.2 came out on 10 December 2004. In the series of TextMate 1.1 betas, TextMate gained features: a preferences window with a GUI for creating and editing themes; a status bar with a symbol list; menus for choosing language and tab settings, and a “bundle editor” for editing language-specific customizations. On 6 January 2006, Odgaard released TextMate 1.5, the first “stable release” since 1.0.2.[8] Reviews were positive, in contrast to earlier versions that had been criticised.[9] <br><br>
+                        
+                        TextMate continued to develop through mid-2006. On 8 August 2006, TextMate was awarded the Apple Design Award for Best Developer Tool, at Apple's Worldwide Developers Conference in San Francisco, California.[10] In February 2006, the TextMate blog expressed intentions for future directions, including improved project management, with a plug-in system to support remote file systems such as FTP, and revision control systems such as Subversion.[11] Throughout 2007, the core application changed only minimally, though its “language bundles” continued to advance. <br><br>
+                        
+                        In June 2009, TextMate 2 was announced as being about 90 percent complete, but with an undisclosed final-feature list.[12] A public alpha was made available for download on the TextMate blog in December 2011, followed by a release candidate at the end of 2016. In September 2019, a final version was released.[13] <br><br>
+                        
+                        In August 2012, TextMate 2's source code was published on GitHub under the terms of GPL-3.0-or-later,[14] an attempt by the developer to counteract restrictions Apple placed on software distributed through the Mac App Store.[15] Odgaard stated he prefers receiving patches as public domain as this preserves his ability to release a future version under a more permissive license, or to make a version available on the Mac App Store. Odgaard also stated he has a friend who uses some of TextMate's frameworks in a closed-source project, and they could not incorporate patches released under GPL.[16][17] <br><br>
+                        
+                        In October 2021, the latest/last commit was made to GitHub, though no announcement has been made to the effect that the project has been officially abandoned and its source code is still publicly available.[18]
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mbtn" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
