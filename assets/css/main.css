@@ -2295,11 +2295,11 @@ section,
   }
   .header .logo h1{
     font-size: 1.3em;
-    margin-left: -320px;
+    margin-left: -333px;
   }
   .header ul {
     font-size: 12px;
-    margin-left: 121px;
+    margin-left: 130px;
     margin-top: -10px;
     gap: 10px;
     /* flex-direction: column; */
@@ -2440,9 +2440,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
 
 /*--------------------------------------------------------------
 # Get A Quote Section
