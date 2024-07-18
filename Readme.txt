@@ -1,6 +1,5 @@
-Thanks for downloading this template!
+Thanks for visiting our website!
 
-Template Name: Logis
-Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Developer Name: Muhammad Abdal
+website URL: https://aptechvisionproject.netlify.app/   
+Author: https://akwebdeveloper.netlify.app/
