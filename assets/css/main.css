@@ -2422,6 +2422,14 @@ section,
   transition: 0.4s;
   border-radius: 4px;
 }
+.submit{
+  padding: 5px;
+  width: 150px;
+  color: white;
+  background-color: #1f0a12;
+  border-radius: 5px;
+  border: none;
+}
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
