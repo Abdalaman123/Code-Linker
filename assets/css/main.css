@@ -655,6 +655,8 @@ footer .social-icons .fab{
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  justify-content: center;
+  margin-left: 0px;
   text-align: center;
   line-height: 40px;
   font-size: 20px;
@@ -2561,6 +2563,11 @@ section,
   padding: 10px 30px;
   transition: 0.4s;
   border-radius: 4px;
+}
+footer ul li{
+  list-style: none;
+  text-decoration: none;
+  margin-left: -28px;
 }
 
 .get-a-quote .php-email-form button[type=submit]:hover {
