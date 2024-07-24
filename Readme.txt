@@ -7,4 +7,4 @@ Author: https://akwebdeveloper.netlify.app/
 Author: https://akwebzone.netlify.app/
 Author: https://akdevzone.netlify.app/
 Author: https://akwebhub.netlify.app/
-Author: https://akdevmegic.netlify.app/
+Author: https://akdevmagic.netlify.app/
